@@ -1,0 +1,262 @@
+/* Theme color */
+.select-wrapper {
+    position: relative;
+}
+.select-wrapper select {
+    display: none;
+}
+.select-wrapper .select-btn {
+    display: flex;
+    background: white;
+    text-decoration: none;
+    text-align: left;
+    padding: 0;
+    color: #333;
+    width: 100%;
+    border: 0;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    cursor: pointer;
+}
+.select-wrapper .select-btn .label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    display: block;
+    overflow: hidden;
+    margin-right: 45px;
+    padding: 0 0.75rem;
+    display: flex;
+    align-items: center;
+}
+.select-wrapper .select-btn .caret {
+    position: absolute;
+    font-size: 1.25rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 0.75rem;
+    display: flex;
+    align-items: center;
+}
+.select-wrapper .select-btn img {
+    width: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.select-wrapper .select-btn img ~ img {
+    margin-left: 5px;
+}
+.select-wrapper .select-btn .icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 50%;
+    padding: 5px;
+}
+.select-wrapper .select-btn .icon ~ .icon {
+    margin-left: 5px;
+}
+.select-wrapper .select-list {
+    display: none;
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-width: 0 1px 1px;
+}
+.select-wrapper .select-list li.search {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-width: 0 0 1px 0;
+    background: rgba(0, 0, 0, .05);
+}
+.select-wrapper .select-list li.search .icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 0 0.75rem;
+}
+.select-wrapper .select-list li.search .clear {
+    display: none;
+    align-items: center;
+    height: 100%;
+    padding: 0 0.75rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.select-wrapper .select-list li.search input {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    flex-grow: 1;
+    background: transparent;
+}
+.select-wrapper .select-list li.no-result {
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 0.75rem !important;
+    text-align: center;
+}
+.select-wrapper .select-list li.option {
+    padding: 0 0.75rem;
+    height: 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.select-wrapper .select-list li.option img {
+    width: 25px;
+    margin-right: 5px;
+    margin-left: -5px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.select-wrapper .select-list li.option .icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 50%;
+    padding: 5px;
+}
+.select-wrapper .select-list li.option:hover {
+    background: rgba(0, 0, 0, .05);
+}
+.select-wrapper .select-list li.option[selected] {
+    background: rgba(0, 0, 0, .1);
+}
+.select-wrapper .select-list li.option[disabled] {
+    opacity: 0.25;
+}
+.select-wrapper .select-list li.option[placeholder] {
+    display: none !important;
+}
+.select-wrapper .select-list li.option .check {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 0.75rem;
+}
+.select-wrapper .select-list li.group span {
+    cursor: default;
+    padding: 0.75rem;
+    display: block;
+    user-select: none;
+}
+.select-wrapper .select-list li.group span ~ li {
+    padding-left: 2rem !important;
+}
+.select-wrapper .select-list li.group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.select-wrapper .select-list li.group ul li {
+    padding-left: 1.5rem;
+}
+.input-group {
+    position: relative;
+    margin: 1rem 0;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #64ffda;
+}
+input[type=text], input[type=search], select, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    outline: none;
+    border-radius: 3px;
+}
+input[type=text]:focus, input[type=search]:focus, select:focus, textarea:focus {
+    border-color: rgba(52, 152, 219, 0.5);
+}
+body {
+    background: #333;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+h1, h2, h3 {
+    font-weight: 300;
+}
+h1 {
+    color: #64ffda;
+}
+span[text] {
+    font-size: 1.1rem;
+    position: relative;
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+span[text]:before {
+    position: relative;
+    content: attr(text);
+    display: inline-block;
+    background: #333;
+    color: #64ffda;
+    padding-right: 0.75rem;
+    z-index: 1;
+}
+span[text]:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #64ffda;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+sup {
+    color: #64ffda;
+    font-weight: 500;
+    font-size: 0.75rem;
+    top: -1em;
+}
+.container {
+    width: 80%;
+    max-width: 1024px;
+    margin: auto;
+}
+.text-center {
+    text-align: center;
+}
+.row:before, .row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.half {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+@media screen and (max-width: 789px) {
+    .half {
+        width: 100%;
+    }
+}

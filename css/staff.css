@@ -1,0 +1,40 @@
+
+.staff-menu {
+    display: inline-table;
+    width:100%;
+    padding-bottom: 30px;
+}
+
+.staff-menu-button {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: inline-table;
+    height: 40px;
+    background-color: #3174c7;
+    font-size: 25px;
+
+}
+
+.staff-table-col {
+    display: table-cell;
+    padding: 10px;
+}
+
+.staff-table-col.button {
+    background-color: mediumturquoise;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.staff-table-col.headline {
+    background-color: #3174c7;
+}
+
+.staff-table-col-splits {
+    display: table-cell;
+    width:1%;
+}
+
+.staff-table-row {
+    display: table-row;
+}

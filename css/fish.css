@@ -1,0 +1,420 @@
+.fish-placeholder {
+    align-self:center;
+}
+* {
+    box-sizing: border-box;
+}
+*:focus, *:active, *:focus:active {
+    outline: none;
+}
+body {
+}
+#toggleSpeed {
+    background: tomato;
+    border: none;
+    border-radius: 0.6em;
+    bottom: 0;
+    box-shadow: 0 -0.08em 0 0 #ffa494, 0 0.3em 0 0 shade(tomato, 8%);
+    color: white;
+    margin: 0.5em 5vw;
+    padding: 1em 2em 1.2em;
+    position: fixed;
+    width: 90vw;
+}
+.fish {
+    animation: fish 0.8s ease-in-out infinite alternate;
+    font-size: 10px;
+    left: 85%;
+    perspective: 100px;
+    position: absolute;
+    margin-top: 1%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 15;
+
+}
+.fish .body, .fish .fins {
+    height: 7em;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 12em;
+}
+.fish .body {
+    background: darkorange;
+    border-radius: 50%;
+    box-shadow: inset 0.3em -0.5em 0 0 shade(darkorange, 10%);
+}
+.fish .body:before, .fish .body:after {
+    border-radius: 35% / 50%;
+    box-shadow: -0.1em 0.05em 0 0 shade(darkorange, 30%), -0.1em 0.05em 0.1em 0 rgba(0, 0, 0, .1);
+    content: "";
+    height: 3em;
+    left: 7.5em;
+    position: absolute;
+    top: 1.7em;
+    transform: rotate(-6deg);
+    width: 1em;
+}
+.fish .body:after {
+    height: 2.8em;
+    left: 6.7em;
+    top: 1.8em;
+    transform: rotate(-8deg);
+}
+.fish .fins div {
+    position: absolute;
+    z-index: -1;
+}
+.fish .fins .top {
+    animation: finTop 1.2s linear infinite alternate;
+    border-radius: 0 100% 0 0;
+    box-shadow: 2.5em 1em 1em 0 rgba(0, 0, 0, .1), 3em 0.5em 0 0 orange;
+    height: 3em;
+    left: 0;
+    top: -2.25em;
+    transform: rotateZ(-5deg);
+    transform-origin: 7.5em bottom;
+    width: 5em;
+}
+.fish .fins .bottom {
+    animation: finBottom 1.2s linear infinite alternate;
+    border-radius: 0 0 100%;
+    bottom: -1.4em;
+    box-shadow: 2em -0.3em 0 0 rgba(0, 0, 0, .1), 2em -0.3em 0 0 orange;
+    height: 2em;
+    left: 2em;
+    transform: rotateZ(5deg);
+    transform-origin: 5.5em top;
+    width: 3.5em;
+}
+.fish .fins .bottom + .bottom {
+    bottom: -0.4em;
+    box-shadow: 2em -0.5em 0 0 rgba(0, 0, 0, .1), 2em -0.5em 0 0 orange;
+    height: 1.5em;
+    left: 0;
+    transform: rotateZ(10deg);
+    width: 2.5em;
+}
+.fish .tail {
+    animation: tailSlow 1.2s ease-in-out infinite alternate;
+    border-radius: 50%;
+    box-shadow: 2.5em 0.5em 1em -1em rgba(0, 0, 0, .1), 2.5em 0 0 0 orange, 2.75em -0.15em 0 0.05em darkorange, 2.8em 0.1em 0 0.1em #cc7000;
+    height: 9em;
+    left: -15.8em;
+    position: absolute;
+    top: -5.5em;
+    transform: skewX(7deg);
+    transform-origin: 10em center;
+    transform-style: preserve-3d;
+    width: 7em;
+}
+.fish .side {
+    animation: sideFinSlow 3.2s linear infinite alternate;
+    border-bottom: 0.4em solid transparent;
+    border-left: 2em solid orange;
+    border-top: 0.4em solid transparent;
+    border-radius: 0.4em;
+    box-shadow: inset -1.5em -0.5em 4em 0 rgba(0, 0, 0, .7);
+    height: 2em;
+    left: -2.5em;
+    position: absolute;
+    top: -1em;
+    transform: rotate(-8deg);
+    transform-origin: 2em center;
+    transform-style: preserve-3d;
+    width: 0;
+}
+.fish .side:before {
+    background: shade(orange, 5%);
+    border-radius: 0.4em 100% 0 0.4em;
+    box-shadow: -0.2em 0.2em 0.5em 0 rgba(0, 0, 0, .1);
+    content: "";
+    height: 1.1em;
+    left: -1.7em;
+    position: absolute;
+    transform: skewY(-10deg);
+    width: 1.7em;
+}
+.fish .side:after {
+    background: orange;
+    border-radius: 50%;
+    content: "";
+    height: 1.2em;
+    left: -0.3em;
+    position: absolute;
+    width: 0.6em;
+}
+.fish .eye {
+    animation: eye 4s linear infinite;
+    background: black;
+    border-radius: 50%;
+    box-shadow: inset 0.35em 0 0 0.5em white;
+    height: 2em;
+    left: 2.5em;
+    position: absolute;
+    top: -1.5em;
+    width: 2em;
+    z-index: 10;
+}
+.fish .bubbles .bubble {
+    animation: bubbleOne 3s ease-in infinite;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0.5em 0 rgba(255, 255, 255, .5);
+    height: 2em;
+    left: 5.8em;
+    position: absolute;
+    top: -1em;
+    transform: scale(0);
+    transform-origin: left center;
+    width: 2em;
+}
+.fish .bubbles .bubble:nth-child(4n-1) {
+    animation-name: bubbleTwo;
+    animation-delay: 0.8s;
+    animation-duration: 3.3s;
+}
+.fish .bubbles .bubble:nth-child(4n-2) {
+    animation-name: bubbleThree;
+    animation-delay: 1.5s;
+    animation-duration: 3.15s;
+}
+.fish .bubbles .bubble:nth-child(4n-3) {
+    animation-name: bubbleFour;
+    animation-delay: 2.2s;
+    animation-duration: 2.85s;
+}
+.fish.fast {
+    animation: fish 0.3s ease-in-out infinite alternate;
+}
+.fish.fast .tail {
+    animation: tailFast 0.065s ease-in-out infinite alternate;
+    height: 7em;
+    left: -16em;
+    top: -4em;
+}
+.fish.fast .fins .top, .fish.fast .fins .bottom {
+    animation-duration: 0.3s;
+}
+.fish.fast .side {
+    animation: sideFinFast 0.065s linear infinite;
+}
+.fish.fast .eye {
+    animation: none;
+}
+.fish.fast .eye:after {
+    background: darkorange;
+    content: "";
+    height: 0.8em;
+    position: absolute;
+    transform: rotate(10deg);
+    width: 2.5em;
+}
+.fish.fast .bubbles .bubble {
+    animation: bubbleOneFast 0.3s ease-in infinite;
+}
+.fish.fast .bubbles .bubble:nth-child(4n-1) {
+    animation-name: bubbleTwoFast;
+    animation-delay: 0.8s;
+    animation-duration: 0.33s;
+}
+.fish.fast .bubbles .bubble:nth-child(4n-2) {
+    animation-name: bubbleThreeFast;
+    animation-delay: 1.5s;
+    animation-duration: 0.315s;
+}
+.fish.fast .bubbles .bubble:nth-child(4n-3) {
+    animation-name: bubbleFourFast;
+    animation-delay: 2.2s;
+    animation-duration: 0.285s;
+}
+@keyframes bubbleOne {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(0.2em) translateY(-60vh);
+    }
+}
+@keyframes bubbleTwo {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(-0.2em) translateY(-60vh);
+    }
+}
+@keyframes bubbleThree {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(0.4em) translateY(-60vh);
+    }
+}
+@keyframes bubbleFour {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(-0.4em) translateY(-60vh);
+    }
+}
+@keyframes bubbleOneFast {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(-80vw) translateY(-10vh);
+    }
+}
+@keyframes bubbleTwoFast {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(-80vw) translateY(-10vh);
+    }
+}
+@keyframes bubbleThreeFast {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(-80vw) translateY(-10vh);
+    }
+}
+@keyframes bubbleFourFast {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+    25% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateX(-80vw) translateY(-10vh);
+    }
+}
+@keyframes fish {
+    from {
+        top: calc(50% - .25em);
+    }
+    to {
+        top: calc(50% + .25em);
+    }
+}
+@keyframes sideFinSlow {
+    0% {
+        transform: rotateZ(-8deg) rotateY(2deg);
+    }
+    30% {
+        transform: rotateZ(-14deg) rotateY(40deg);
+    }
+    60% {
+        transform: rotateZ(-22deg) rotateY(20deg);
+    }
+    100% {
+        transform: rotateZ(-28deg) rotateY(50deg);
+    }
+}
+@keyframes sideFinFast {
+    from {
+        transform: rotateZ(-2deg) rotateY(2deg);
+    }
+    to {
+        transform: rotateZ(-2deg) rotateY(40deg);
+    }
+}
+@keyframes tailSlow {
+    from {
+        transform: rotateY(45deg) skewX(7deg);
+    }
+    to {
+        transform: rotateY(-45deg) skewX(7deg);
+    }
+}
+@keyframes tailFast {
+    from {
+        transform: rotateY(25deg) skewX(10deg) scaleX(1.3);
+    }
+    to {
+        transform: rotateY(-25deg) skewX(10deg) scaleX(1.3);
+    }
+}
+@keyframes finTop {
+    from {
+        transform: rotate(-6deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes finBottom {
+    from {
+        transform: rotate(6deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes eye {
+    0% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(0deg);
+    }
+    10% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(0deg);
+    }
+    15% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(-30deg);
+    }
+    35% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(-30deg);
+    }
+    45% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(30deg);
+    }
+    55% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(30deg);
+    }
+    65% {
+        box-shadow: inset -0.35em 0 0 0.5em white;
+        transform: rotate(30deg);
+    }
+    75% {
+        box-shadow: inset -0.35em 0 0 0.5em white;
+        transform: rotate(30deg);
+    }
+    85% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(0deg);
+    }
+    100% {
+        box-shadow: inset 0.35em 0 0 0.5em white;
+        transform: rotate(0deg);
+    }
+}

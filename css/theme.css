@@ -1,0 +1,1052 @@
+@font-face {
+    font-family: Logofont;
+    src: url('fonts/Machine Gunk.otf') format('opentype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Atlantis;
+    src: url('fonts/AtlantisInlineGrunge.otf') format('opentype');
+    src: url('fonts/AtlantisInlineGrunge.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Caps;
+    src: url('fonts/ccapshad.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Sugars;
+    src: url('fonts/NATURAL SUGARS.otf') format('opentype');
+    src: url('fonts/NATURAL SUGARS.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Baloon ;
+    src: url('fonts/baloon.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Air;
+    src: url('fonts/AIR.TTF') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    font-family: 'Logofont', Fallback, sans-serif;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+
+}
+
+.head {
+    background-color: #00eeeeee;
+    /*height: auto;*/
+    width: 100%;
+}
+
+.dashboard {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+    padding: 3px;
+    padding-bottom: 2%;
+    /*padding-left: 50px;*/
+    /*vertical-align:text-top;*/
+}
+.button {
+    font-family: Gill Sans, sans-serif;
+    font-weight: 500;
+    font-size: larger;
+    text-align: center;
+
+
+    display: inline-table;
+    align: left;
+    width: 10%;
+    color: white;
+    background-color: darkorange;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.button:hover {
+    cursor: pointer;
+    background-color: coral;
+
+}
+
+.button.clicked {
+    background-color: coral;
+}
+.page-dashboard {
+
+    position: relative;
+    background-color: tomato;
+    width: 100%;
+    text-align: left;
+
+    margin-top: 15px;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline-start: 35px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+
+}
+.page-dashboard.about {
+    height: 30%;
+}
+
+
+.page-button {
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+
+    display:inline-table;
+    vertical-align:middle;
+    align: left;
+    width: 5%;
+    color: darkorange;
+    background-color: #FFeeeeee;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+
+
+
+
+}
+
+
+.page-button-tag {
+    font-family: Gill Sans, sans-serif;
+    font-weight: 500;
+    font-size: larger;
+
+    display: inline-table;
+    align: left;
+    color: blue;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 7px;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.page-button-description {
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+
+    display:inline-table;
+    vertical-align:middle;
+    align: left;
+    width: 5%;
+    color: #FFeeeeee;
+    padding: 10px;
+    padding-left:20px;
+    margin: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+}
+.page-button:hover {
+    cursor: pointer;
+    color: darkcyan;
+
+}
+
+#display {
+    /*background-color: rgba(255, 255, 255, 0.9); !* Color white with alpha 0.9*!*/
+    /*padding-top: 20px;*/
+    padding-bottom: 12px;
+
+}
+
+/*#display  table{*/
+/*!*border-radius: 5px;*!*/
+/*width: 100%;*/
+/*font-family: "Helvetica Neue", sans-serif;*/
+/*font-size: 20px;*/
+/*color: white;*/
+/*column-span: none;*/
+/*background-color: darkcyan;*/
+/*!*}*!*/
+/*#display  table td{*/
+/*padding: 2px;*/
+/*}*/
+
+body {
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";       !* IE 8 *!*/
+    /*filter: alpha(opacity=70);  !* IE 5-7 *!*/
+    /*-moz-opacity: 0.7;          !* Netscape *!*/
+    /*-khtml-opacity: 0.7;        !* Safari 1.x *!*/
+    /*opacity: 0.7;               !* Good browsers *!*/
+    /*}*/
+}
+html {
+    background-image: url('etienne-girardet-360034-unsplash (1).jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    background-size:100% auto;
+    width: 100%;
+    height: 100%;
+    background-origin: border-box;
+
+
+}
+
+.buttom-dash {
+    position: relative;
+    /*background-color: #eeeeee;*/
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    padding: 3px;
+    visibility: visible;
+}
+.buttom-dash.open {
+
+}
+
+hr {
+    display: block;
+    unicode-bidI:;
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style:solid;
+    border-width: 1.3px;
+    color: black;
+}
+
+.landing-main {
+    text-align: center;
+    width: 100%;
+    font-family: 'Baloon', Fallback, sans-serif;
+    color: #eeeeee;
+    background-color: rgba(0, 139, 139, 0.46);
+    font-size: 80px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+
+
+/*.score-plus {*/
+/*font-family: Caps, sans-serif;;*/
+/*width: 5%;*/
+/*display: table-cell;*/
+/*border-radius: 50px;*/
+/*font-size: 40px;*/
+/*cursor: pointer;*/
+/*padding-left: 20px;*/
+/*}*/
+
+/*.score-plus:hover {*/
+/*transform: scale(1.3);*/
+/*color: yellow;*/
+/*}*/
+
+/*.score-plus-off {*/
+/*font-family: Caps, sans-serif;;*/
+/*width: 5%;*/
+/*display: table-cell;*/
+/*border-radius: 50px;*/
+/*font-size: 40px;*/
+/*cursor: pointer;*/
+/*padding-left: 20px;*/
+/*}*/
+
+
+
+.splits-row {
+    background-color: rgba(253, 255, 255, 0.60);
+    display:NONE;
+    white-space: pre-wrap;
+    column-span: all;
+    border-radius: 20px;
+    color: coral;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.header {
+    /*background-color: white;*/
+    /*margin-top: 15px;
+    margin-bottom: 15px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:100%;
+    /*padding-left: 8px;*/
+    height: auto;
+    /*padding-right: 8px;*/
+}
+
+.header.title {
+    font-family: Baloon, sans-serif;
+    color: tomato;
+    /*background-color: white;*/
+    font-size: 50px;
+    padding-left: 40px;
+    background-color: rgba(253, 255, 255, 0.60);
+
+    padding-top: 5px;
+}
+
+.header.subtitle {
+    color: coral;
+    background-color: rgba(253, 255, 255, 0.60);
+    font-size: 15px;
+    font-family: "Gill Sans";
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.header.stats {
+    /*color: tomato;*/
+    background-color: rgba(253, 255, 255, 0.60);
+    font-size: 50px;
+    padding-left: 40px;
+    /*padding-top: 4px;
+    padding-bottom: 4px;*/
+}
+
+
+.split-container {
+    width: 100%;
+
+}
+.arrow-button {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+
+#page {
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    height: 60vh;
+    width: 100vw;
+}
+
+.tableMain {
+    display: table;
+    background-color: rgba(255, 208, 132, 0.39);
+    /*background-color: rgba(253, 255, 255, 0.60);*/
+
+    width: 100%;
+
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color:white;
+    padding: 10px;
+
+    text-align: center;
+
+}
+
+.tableRow {
+    display: inline-table;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.tableRow-selected {
+    display: inline-table;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 5px;
+
+    border-top-style: outset;
+    border-top-width: 15px;
+    border-bottom-style: inset ;
+    border-bottom-width: 15px ;
+    /*border-bottom-right-radius: 50px;*/
+
+    /*border-bottom-left-radius: 50px;*/
+    border-radius: 60px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: rgba(255, 255, 0, 0.6);
+;
+
+}
+
+
+
+
+
+.tableCell {
+    display: table-cell;
+    width: 14%;
+}
+
+/*//table caption row*/
+
+.tableCellHeadline {
+    font-family:Roboto;
+    display: table-row;
+    width:100%;
+    font-size: 15px;
+    text-align: center;
+    color: yellow;
+    padding: 30px;
+    padding-top: 50px;
+    text-decoration: underline;
+    border-bottom: 10px;
+    border-bottom-style: solid;
+
+}
+
+.tableCell-name-relays {
+    display: table-cell;
+    width: 23%;
+    color:tomato;
+    text-align: left;
+
+}
+
+.tableCell-name-relays-caption {
+    display: table-cell;
+    width: 23%;
+    color:yellow;
+    text-align: left;
+
+}
+
+.tableCell-name {
+    display: table-cell;
+    width: 23%;
+    color:tomato;
+    text-align: left;
+
+}
+.tableCell-name:hover {
+    cursor: pointer;
+
+    color: darkcyan;
+    text-decoration: underline;
+
+}
+
+.tableCell-name-caption {
+    display: table-cell;
+    width: 23%;
+    color:yellow;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+.tableCell-stroke{
+    display: table-cell;
+    width: 5%;
+
+}
+.tableCell-distance{
+    display: table-cell;
+    width: 5%;
+
+}
+.tableCell-time {
+    display: table-cell;
+    width: 10%;
+
+}
+.tableCell-eventName{
+    display: table-cell;
+    color:tomato;
+    width: 15%;
+
+}
+
+.tableCell-eventName:hover {
+    cursor: pointer;
+    color: darkcyan;
+    text-decoration: underline;
+
+}
+.tableCell-eventName-caption{
+    display: table-cell;
+    color:yellow;
+    width: 15%;
+
+}
+.tableCell-location{
+    display: table-cell;
+    width: 15%;
+
+}
+.tableCell-eventCourse {
+    display: table-cell;
+    width: 5%;
+}
+
+.tableCell-date {
+    display: table-cell;
+    width: 10%;
+
+}
+.tableCell-rank {
+    display: table-cell;
+    width: 3%;
+    color:tomato;
+
+
+}
+
+.tableCell-rank-caption {
+    display: table-cell;
+    width: 3%;
+    color:yellow;
+
+
+}
+.tableCell-plus-off{
+    display: table-cell;
+    font-family: Caps, sans-serif;
+    font-size: 35px;
+    width: 3%;
+    cursor: default;
+    vertical-align: center;
+
+}
+
+.tableCell-plus-active{
+    display: table-cell;
+
+    font-family: Caps, sans-serif;
+    font-size: 35px;
+    width: 3%;
+    cursor: pointer;
+
+    vertical-align: super;
+
+}
+
+.tableCell-plus-active:hover{
+    transform: scale(1.3);
+    color:    darkcyan;
+;
+}
+
+.tableCell-indexCell {
+    display: table-cell;
+    width: 40px;
+    font-family: Caps, sans-serif;
+    text-align: center;
+    color: yellow;
+
+}
+
+.tableCell-indexCell-caption {
+    display: table-cell;
+    width: 40px;
+    color:yellow;
+    text-align: center;
+
+}
+
+
+.tableCell-indexCell-relays {
+    display: table-cell;
+    width: 3%;
+    font-family: Caps, sans-serif;
+    text-align: center;
+    color: yellow;
+}
+
+.tableCell-indexCell-relays-caption {
+    display: table-cell;
+    width: 3%;
+    color:yellow;
+    text-align: center;
+
+}
+
+.table-separator {
+    /*background-color: rgba(0, 139, 139, 0.46);*/
+    width: 100%;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    color: yellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.bg {
+
+}
+
+
+.club_logo {
+    width: 100%;
+    margin-top: 10px;
+
+    /*position: absolute;*/
+    align: right;
+
+}
+.club_logo:hover {
+    cursor: pointer;
+
+}
+
+
+.split-div {
+    display: inline-table;
+    padding-left: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.stat-value {
+    font-size: 35px;
+    font-family: Baloon;
+    color: white;
+
+    text-align: center;
+    display: table-cell;
+    padding-top: 5px;
+
+}
+.stat-caption{
+    font-size: 16px;
+    color: coral;
+    font-family: "Gill Sans";
+    text-align: center;
+    display: table-cell;
+
+}
+.stat-caption-container {
+    display: table-row;
+    text-align: center;
+
+}
+.stat-value-container {
+    display: table-row;
+    text-align: center;
+}
+.stat-box {
+    display: table-cell;
+    border-width: 3px;
+    border-color: transparent;
+    border-style: solid;
+    padding-right: 15px;
+}
+
+
+.stat-dash {
+    display: inline-flex;
+    padding-bottom: 10px;
+
+}
+
+.searchbar {
+    border-radius: 20px;
+    font-size: 18px;
+    height:41px;
+    font-family: "Gill Sans", sans-serif;
+    display:table-cell;
+    vertical-align:middle;
+    align: left;
+    width: 20%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0;
+    background-color: #FFeeeeee;
+    text-align: center;
+    color: tomato;
+
+}
+
+.searchbar-content {
+    position: absolute;
+    display: none;
+    max-height: 300%;
+    overflow: scroll;
+
+}
+
+.searchbar-li {
+    border-radius: 25px;
+    position: relative;
+    font-size: 18px;
+    height:41px;
+    font-family: "Gill Sans", sans-serif;
+    padding: 10px;
+    background-color: #FFeeeeee;
+    color:darkcyan;
+    text-align: center;
+    margin: 5px;
+
+}
+
+.searchbar-li:hover {
+    color: yellow;
+    cursor: pointer;
+
+}
+
+#logo:hover {
+    cursor: pointer;
+
+}
+
+.splits-table-main {
+    display: table-row;
+    width: 100%;
+}
+.splits-table-row {
+    display: block;
+    text-align: left;
+
+}
+
+
+.split-block {
+    display: block;
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.split-distance {
+    color:tomato;
+    /*text-decoration: underline;*/
+
+
+}
+
+.third-line {
+    display: table-cell;
+    float: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.split-tick {
+    color: darkcyan;
+    /*text-decoration: underline;*/
+    text-align: start;
+    border-bottom-width: 3px;
+    border-bottom-color: darkturquoise;
+    border-bottom-style: solid;
+
+    border-top-width: 3px;
+    border-top-color: darkturquoise;
+    border-top-style: solid;
+
+
+
+}
+
+.split-50-cut {
+    color: darkcyan;
+}
+.split-100-cut {
+    color: darkcyan;
+
+}
+
+
+
+
+.split-tick-final {
+    color: deeppink;
+    border-width: 3px;
+    border-color: darkturquoise;
+    border-style: solid;
+    text-align: center;
+}
+
+.splits-avg-50-value {
+    color: darkturquoise;
+}
+
+.splits-avg-100-value {
+    color: darkturquoise;
+}
+
+.splits-avg-50-caption {
+    color:tomato;
+}
+
+.splits-avg-100-caption {
+    color:tomato;
+}
+
+.splits-reaction-caption {
+    color:tomato;
+
+}
+
+.splits-reaction-value {
+    color: darkturquoise;
+}
+
+.tableCell-name-relays-single {
+    display: table-cell;
+    width: 23%;
+    color:tomato;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 10px;
+
+}
+.tableCell-name-relays-single:hover {
+    cursor: pointer;
+
+    color: darkcyan;
+    text-decoration: underline;
+
+}
+
+.split-ag-caption {
+    color:tomato;
+}
+
+.split-ag-value {
+    color: darkturquoise;
+}
+
+.splits-relays-line {
+    display: table-row;
+}
+
+.splits-relay-name {
+    display: table-cell;
+    float:left;
+
+}
+
+.splits-relay-stroke {
+    display: table-cell;
+    float:left;
+    color: tomato;
+    width: 5%;
+    padding-right: 10%;
+}
+
+.splits-relay-block {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 15px;
+
+    float: left;
+    /*padding-left: 10px;*/
+    /*width: 30%;*/
+    vertical-align: top;
+
+}
+
+.splits-relay-distance {
+    display: inline-block;
+    color:tomato;
+    text-align: left;
+
+}
+.splits-relay-time {
+    color: darkcyan;
+    /*text-decoration: underline;*/
+    text-align: left;
+    border-bottom-width: 3px;
+    border-bottom-color: darkturquoise;
+    border-bottom-style: solid;
+
+    border-top-width: 3px;
+    border-top-color: darkturquoise;
+    border-top-style: solid;
+
+
+
+}
+.splits-relay-50cut {
+    color: darkcyan;
+
+}
+.splits-relay-100cut {
+    color: darkcyan;
+
+}
+.splits-relay-200cut {
+    color: deeppink;
+    border-width: 3px;
+    border-color: darkturquoise;
+    border-style: solid;
+    text-align: center;
+}
+
+.splits-relay-table {
+    display: table;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.optionbar-wrapper {
+    position: relative;
+}
+
+.optionbar-content {
+    position: absolute;
+    display: none;
+    overflow: visible;
+    z-index: 1;
+    right: 1px;
+
+}
+
+.optionbar-li {
+    display: table;
+    border-radius: 25px;
+    position: relative;
+    font-size: 18px;
+    height:41px;
+    font-family: "Gill Sans", sans-serif;
+    padding: 10px;
+    background-color: #FFeeeeee;
+    color:darkcyan;
+    text-align: center;
+    margin: 5px;
+
+}
+
+.optionbar-li:hover {
+    color: yellow;
+    cursor: pointer;
+
+}
+
+
+.page-button-option {
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+
+    display:inline-table;
+    vertical-align:middle;
+    align: left;
+    width: 5%;
+    color: darkorange;
+    background-color: #FFeeeeee;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+
+
+
+}
+
+.splits-relay-ag {
+
+}
+
+.splits-last-line {
+    display: flex;
+}
+
